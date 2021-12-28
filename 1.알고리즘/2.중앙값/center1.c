@@ -3,19 +3,26 @@
 #include  <stdlib.h>
 //세 정수의 중앙값을 찾는 알고리즘
 int centerval(int a,int b,int c){
-    int rst = a;
-    if(a>b && a>c) rst = (b>c)?b:c;
-    else if(b>a && b>c) rst = (a>c)?a:c;
-    else if(c>a && c>b) rst = (a>b)?a:b;
+    int rst;
+    if( a>=b){
+        if(b>=c) return b;
+        else if(a <=c) return a;
+        else return c;
+    }
+    else if(a>c) return a;
+    else if(b > c) return c;
+    else return b;
 
-    return rst;
 }
 int main(){
-    int val[3] = {},rst;
+    
+    int a,b,c;
     printf("세 정수의 중앙값을 구합니다.\n");
-    for(int i=0;i<3;i++){printf("%c의 값: ",(97+i));scanf("%d",&val[i]);}
-    rst = centerval(val[0],val[1],val[2]);
+    printf("a의 값: ");scanf("%d",&a);
+    printf("b의 값: ");scanf("%d",&b);
+    printf("c의 값: ");scanf("%d",&c);
 
-    printf("중앙값은 %d 입니다.",rst);
+    int rst = centerval(a,b,c);
+    printf("결과값: %d",rst);
 
 }
