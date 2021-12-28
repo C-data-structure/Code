@@ -4,9 +4,9 @@
 //세 정수의 중앙값을 찾는 알고리즘
 int centerval(int a,int b,int c){
     int rst = a;
-    if(a>b && a>c) rst = (b>c)?b:c;
-    else if(b>a && b>c) rst = (a>c)?a:c;
-    else if(c>a && c>b) rst = (a>b)?a:b;
+    if(a>b && a>c) rst = (b>c)?b:c;//3번
+    else if(b>a && b>c) rst = (a>c)?a:c;//5번
+    else rst = (a>b)?a:b;//5번
 
     return rst;
 }
