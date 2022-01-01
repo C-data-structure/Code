@@ -6,12 +6,11 @@
 int main(){
     int a,b;
     printf("a를 입력하세요: ");scanf("%d",&a);
-    while(1){
+    do{
         printf("b를 입력하세요: ");scanf("%d",&b);
-        if(b>a){
-            printf("결과값은 %d 입니다.",b-a);
-            return 0;
-        }else printf("다시 ");
-    }
+    }while(a>b);
+    printf("결과값은 %d 입니다.",b-a);
+
+
     
 }
