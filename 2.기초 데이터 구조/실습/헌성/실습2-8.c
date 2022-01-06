@@ -22,9 +22,9 @@ int card_convr(unsigned x,int n,char arr[]){
 int main(){
     int x,n,rep;
     char arr[37]={0};
-    printf("10진수를 기수변환합니다.\n변환할 숫자를 입력하세요: ");scanf("%d",&n);
-    printf("변환할 기수를 입력하세요(2-36): ");scanf("%d",&x);
-    rep = card_convr(n,x,arr);
+    printf("10진수를 기수변환합니다.\n변환할 숫자를 입력하세요: ");scanf("%d",&x);
+    do{printf("변환할 기수를 입력하세요(2-36): ");scanf("%d",&n);}while(n<2 || n>36);
+    rep = card_convr(x,n,arr);
 
     // printf(">%d",rep);
     printf("변환된 값을 출력합니다: ");
