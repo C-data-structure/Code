@@ -2,6 +2,7 @@
 #include  <string.h>
 #include  <stdlib.h>
 #include  <time.h>
+/*배열 요소의 최댓값 구하기 프로그램*/
 int max_heigh(int *arr){
     int max = arr[0];
     for(int i=0;i<(int)sizeof(arr[0]);i++){

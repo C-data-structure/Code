@@ -1,7 +1,7 @@
 #include  <stdio.h>
 #include  <string.h>
 #include  <stdlib.h>
-
+/**배열 요소를 역순으로 출력하는 프로그램(난수 생성)*/
 #define swap(tmp, x,y)do{tmp = x; x = y; y=tmp;}while(0)
 
 void arr_reverse(int *arr){

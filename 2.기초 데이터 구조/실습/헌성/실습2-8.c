@@ -1,7 +1,7 @@
 #include  <stdio.h>
 #include  <string.h>
 #include  <stdlib.h>
-
+/*기수변환 프로그램*/
 int card_convr(unsigned x,int n,char arr[]){
     /**
      x: 바꾸고자하는 진수
