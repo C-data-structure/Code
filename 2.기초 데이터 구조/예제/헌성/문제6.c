@@ -1,7 +1,17 @@
 #include  <stdio.h>
 #include  <string.h>
 #include  <stdlib.h>
-/*기수변환 프로그램*/
+/*배열의 맨 앞쪽에 윗자리가 아니라 아랫자리를 저장하는 프로그램을 작성하라
+(처음만든 코드가 코드 맨 앞자리에 윗자리를 저장하는 코드여서 문제바꿈)
+*/
+#define swap(tmp, x,y)do{tmp = x; x = y; y=tmp;}while(0)
+//배열 요소를 역순으로 정렬하는 과정을 일일히 출력하는 프로그램을 작성하라
+
+void reverse(char *rst){
+    int rep = (int)strlen(rst),tmp;
+    for(int i=0;i<rep/2;i++)swap(tmp,rst[i],rst[rep - i -1]);
+}
+
 int card_convr(unsigned x,int n,char arr[]){
     /**
      x: 바꾸고자하는 진수
@@ -26,9 +36,9 @@ int main(){
     do{printf("변환할 기수를 입력하세요(2-36): ");scanf("%d",&n);}while(n<2 || n>36);
     rep = card_convr(x,n,arr);
 
-    // printf(">%d",rep);
+    reverse(arr);
     printf("변환된 값을 출력합니다: ");
-    for(int i=rep-1;i>=0;i--)printf("%c",arr[i]);
+    for(int i=0;i<rep;i++)printf("%c",arr[i]);
 
 
 }

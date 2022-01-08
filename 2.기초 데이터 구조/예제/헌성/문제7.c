@@ -1,11 +1,11 @@
 #include  <stdio.h>
 #include  <string.h>
 #include  <stdlib.h>
-/*기수변환 프로그램*/
+
 int card_convr(unsigned x,int n,char arr[]){
     /**
-     x: 바꾸고자하는 진수
-     n: 입력받은 숫자(진수 변환할 숫자)
+     n: 바꾸고자하는 진수
+     x: 입력받은 숫자(진수 변환할 숫자)
      arr: 배열이름
      */
     char dchar[] = "0123456789ABCDEFGHIJKLMNOPRSTUVWXYZ";
@@ -13,6 +13,8 @@ int card_convr(unsigned x,int n,char arr[]){
     if(x == 0)arr[digits++] = dchar[0];
     else
         while(x){
+            printf("%d|%6d ... %d\n",n,x,x%n);
+            printf(" +------\n");
             arr[digits ++] = dchar[x%n];
             x/=n;
         }
