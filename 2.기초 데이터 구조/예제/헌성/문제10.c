@@ -14,7 +14,7 @@ void suffle(int a[],int n){
 
         swap(tmp,a[fir],a[end]);
     }
-    
+    //update
 }
 
 int main(){
