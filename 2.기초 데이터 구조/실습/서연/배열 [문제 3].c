@@ -7,7 +7,7 @@
 int main() { //메인함수
    int N,num=1;
    int i,j;
-   int x[100][100] = { NULL };
+   int x[100][100] = { };
    int left, right, temp;
 
    scanf("%d", &N);

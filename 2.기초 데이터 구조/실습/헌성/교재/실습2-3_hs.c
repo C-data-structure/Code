@@ -1,6 +1,7 @@
 #include  <stdio.h>
 #include  <string.h>
 #include  <stdlib.h>
+//동적할당
 int main(){
     int *arr,num;
     printf("원하는 자료의 개수를 입력하세요: "); scanf("%d",&num);

@@ -1,6 +1,7 @@
 #include  <stdio.h>
 #include  <string.h>
 #include  <stdlib.h>
+//동적할당
 int main(){
 
     int N,M;//N개의 정수형 값 저장
