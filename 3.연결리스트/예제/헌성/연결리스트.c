@@ -1,3 +1,4 @@
+@@ -1,42 +0,0 @@
 #include  <stdio.h>
 #include  <string.h>
 #include  <stdlib.h>
@@ -39,4 +40,3 @@ int main(){
 	free(node2);
 	return 0;
 }
-
